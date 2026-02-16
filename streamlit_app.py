@@ -367,7 +367,7 @@ def _download_bytes(df: pd.DataFrame) -> bytes:
 
 def main() -> None:
     st.set_page_config(page_title="CIE Demo", layout="wide")
-    st.title("CIE Demo — Company Intelligence Enrichment")
+    st.title("CIE Demo — Company Information Enrichment")
     st.caption("Enter one company or upload a CSV, then run the enrichment pipeline and download an enriched CSV.")
 
     # Persist results/logs across widget changes (so changing column selection doesn't re-run Wikidata calls).
