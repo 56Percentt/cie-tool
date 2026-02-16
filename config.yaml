@@ -1,0 +1,30 @@
+project:
+  run_name: "cie_mvp_run"
+
+io:
+  input_csv: "data/raw/companies.csv"
+  enriched_csv: "outputs/enriched.csv"
+  audit_jsonl: "outputs/audit.jsonl"
+  summary_md: "outputs/summary_report.md"
+
+retrieval:
+  provider: "wikidata"
+  top_k: 5
+  user_agent: "CIE-Tool/1.0 (ML course MVP; contact: student@example.com)"
+  throttle_seconds: 0.2
+
+matching:
+  # score is mapped to a probability-like confidence (0..1)
+  weights:
+    name_fuzzy: 0.45
+    name_tfidf: 0.35
+    domain_match: 0.20
+  thresholds:
+    high: 0.80
+    medium: 0.60
+    low: 0.45
+
+cache:
+  enabled: true
+  path: ".cache_wikidata.json"
+  max_items: 20000
