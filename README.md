@@ -1,4 +1,4 @@
-# CIE Tool (Company Identity Enrichment)
+# CIE Tool (Company Information Enrichment)
 
 CIE Tool enriches company names (optionally with domains) by matching them to Wikidata entities and outputting an enriched CSV with confidence scores and match metadata. It includes a Streamlit demo webapp for single lookups or batch CSV uploads.
 
